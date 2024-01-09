@@ -6,42 +6,40 @@
     <title>電卓</title>
 </head>
 <body>
-    <form name="dentaku">
-      <table>
-        <tr>
-          <td colspan="4">
-            <input type="text" class="display" name="display" value="" disabled>
-          </td>
-        </tr>
-   
-        <tr>
-          <td><input type="button" value="7" onclick="get_calc(this)"></td>
-          <td><input type="button" value="8" onclick="get_calc(this)"></td>
-          <td><input type="button" value="9" onclick="get_calc(this)"></td>
-          <td><input type="button" value="÷" class="operator" name="div_btn" onclick="get_calc(this)"></td>
-          <td><input type="button" value="C" onclick="get_calc(this)"></td>
-        </tr>
-          
-        <tr>
-          <td><input type="button" value="4" onclick="get_calc(this)"></td>
-          <td><input type="button" value="5" onclick="get_calc(this)"></td>
-          <td><input type="button" value="6" onclick="get_calc(this)"></td>
-          <td><input type="button" value="×" class="operator" name="multi_btn" onclick="get_calc(this)"></td>
-        </tr>
-   
-        <tr>
-          <td><input type="button" value="1" onclick="get_calc(this)"></td>
-          <td><input type="button" value="2" onclick="get_calc(this)"></td>
-          <td><input type="button" value="3" onclick="get_calc(this)"></td>
-          <td><input type="button" value="-" class="operator" onclick="get_calc(this)"></td>
-        </tr>
-   
-        <tr>
-          <td><input type="button" value="0" onclick="get_calc(this)"></td>
-          <td><input type="button" value="." onclick="get_calc(this)"></td>
-          <td><input type="button" value="=" class="equal" onclick="get_calc(this)"></td>
-          <td><input type="button" value="+" class="operator" onclick="get_calc(this)"></td>
-        </tr>
+    <div class="wrapper">
+        <h1 id="header">電卓</h1>
+        <div id="calc">
+          <div>
+            <input readonly id="result" type="text" value="0">
+            <button onclick="c_click(this.innerHTML)">C</button>
+          </div>
+          <div>
+            <button onclick="num_click(this.innerHTML)">7</button>
+            <button onclick="num_click(this.innerHTML)">8</button>
+            <button onclick="num_click(this.innerHTML)">9</button>
+            <button onclick="ope_click(this.innerHTML)">÷</button>
+            
+          </div>
+          <div>
+            <button onclick="num_click(this.innerHTML)">4</button>
+            <button onclick="num_click(this.innerHTML)">5</button>
+            <button onclick="num_click(this.innerHTML)">6</button>
+            <button onclick="ope_click(this.innerHTML)">×</button>
+          </div>
+          <div>
+            <button onclick="num_click(this.innerHTML)">1</button>
+            <button onclick="num_click(this.innerHTML)">2</button>
+            <button onclick="num_click(this.innerHTML)">3</button>
+            <button onclick="ope_click(this.innerHTML)">-</button>
+          </div>
+          <div>
+            <button onclick="num_click(this.innerHTML)">0</button>
+            <button onclick="num_click(this.innerHTML)">.</button>
+            <button onclick="equal_click()">=</button>
+            <button onclick="ope_click(this.innerHTML)">+</button>
+          </div>
+        </div>
+      </div>
         <script src="main.js"></script>
       </table>
     </form>
